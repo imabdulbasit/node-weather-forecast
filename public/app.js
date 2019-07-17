@@ -2,7 +2,7 @@
 
 
 
-const form = document.querySelector('form');
+const form = document.querySelector('form');her
 const search = document.querySelector('input');
 form.addEventListener('submit', (e) => {
     document.querySelector('#p-1').textContent = "Loading...";
@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
     document.querySelector('#p-4').textContent = ''
     e.preventDefault();
     const searchText = search.value;
-    fetch('http://localhost:8080/weather?address=' + searchText).then((response) => {
+    fetch('/weather?address=' + searchText).then((response) => {
         response.json().then((data) => {
             if (data.error)
                 document.querySelector('#p-1').textContent = "Error! Enter valid location";

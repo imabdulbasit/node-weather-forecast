@@ -5,6 +5,7 @@ const hbs = require('hbs');
 const request = require('request');
 const forecast = require('./utils/forecast')
 const geoCode = require('./utils/geoCode');
+const port = process.env.PORT || 8080
 //paths for express 
 
 const publicDirPath = path.join(__dirname, '../public');
@@ -58,6 +59,6 @@ app.get('*', (req, res) => {
     res.render('404')
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log('Server is running!');
 })
