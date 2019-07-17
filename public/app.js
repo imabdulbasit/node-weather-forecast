@@ -2,7 +2,7 @@
 
 
 
-const form = document.querySelector('form');her
+const form = document.querySelector('form');
 const search = document.querySelector('input');
 form.addEventListener('submit', (e) => {
     document.querySelector('#p-1').textContent = "Loading...";
@@ -25,4 +25,3 @@ form.addEventListener('submit', (e) => {
     });
 })
 
-h
